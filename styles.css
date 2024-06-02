@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group-inline {
+    display: inline-block;
+    width: 30%;
+    margin-right: 2%;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, span {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #5cb85c;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+#invoice {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+.total-amount {
+    text-align: right;
+    margin-top: 20px;
+}
+
+#print-invoice {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #337ab7;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#print-invoice:hover {
+    background-color: #286090;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #invoice, #invoice * {
+        visibility: visible;
+    }
+    #invoice {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: none;
+    }
+    #invoice h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    table {
+        margin-bottom: 10px;
+    }
+    .total-amount {
+        text-align: right;
+        margin-top: 20px;
+        font-weight: bold;
+    }
+}
